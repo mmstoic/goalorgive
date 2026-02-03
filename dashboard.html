@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GoalOrGive Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="dashboard">
+    <header class="site-header">
+      <div class="brand">
+        <h1>GoalOrGive</h1>
+        <p id="user-email">Loading...</p>
+      </div>
+      <div class="header-actions">
+        <button id="logout-btn" class="secondary">Log out</button>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>Group fund</h2>
+        <div id="group-panel" class="stack"></div>
+      </section>
+
+      <section class="card">
+        <h2>Create a goal</h2>
+        <form id="goal-form" class="stack">
+          <label>
+            Title
+            <input type="text" name="title" required />
+          </label>
+          <label>
+            Frequency
+            <select name="frequency" required>
+              <option value="daily">Daily</option>
+              <option value="weekly">Weekly</option>
+            </select>
+          </label>
+          <label>
+            Due date
+            <input type="date" name="due_date" required />
+          </label>
+          <label>
+            Penalty points
+            <input type="number" name="penalty_points" min="1" value="5" required />
+          </label>
+          <button type="submit">Add goal</button>
+        </form>
+        <p class="status" id="goal-status"></p>
+      </section>
+
+      <section class="card">
+        <h2>Your goals</h2>
+        <div class="totals">
+          <div>
+            <span class="label">Total owed points</span>
+            <strong id="total-owed">0</strong>
+          </div>
+        </div>
+        <div id="goals-list" class="stack"></div>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

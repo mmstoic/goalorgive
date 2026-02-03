@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GoalOrGive</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="index">
+    <header class="site-header">
+      <div class="brand">
+        <h1>GoalOrGive</h1>
+        <p>Set goals. Missed goals add points to the hangout fund.</p>
+      </div>
+      <nav class="nav-links">
+        <a href="#login">Login</a>
+        <a href="#signup">Sign up</a>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>How it works</h2>
+        <ol class="steps">
+          <li>Create daily or weekly goals.</li>
+          <li>Check in on your dashboard.</li>
+          <li>If you miss a goal, points flow into the group fund.</li>
+        </ol>
+        <p class="note">Points are friendly accountability points, not real money.</p>
+      </section>
+
+      <section id="login" class="card">
+        <h2>Login</h2>
+        <form id="login-form" class="stack">
+          <label>
+            Email
+            <input type="email" name="email" required autocomplete="email" />
+          </label>
+          <label>
+            Password
+            <input type="password" name="password" required autocomplete="current-password" />
+          </label>
+          <button type="submit">Login</button>
+        </form>
+        <p class="status" id="login-status"></p>
+      </section>
+
+      <section id="signup" class="card">
+        <h2>Create account</h2>
+        <form id="signup-form" class="stack">
+          <label>
+            Username
+            <input type="text" name="username" required autocomplete="nickname" />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required autocomplete="email" />
+          </label>
+          <label>
+            Password
+            <input type="password" name="password" required minlength="6" autocomplete="new-password" />
+          </label>
+          <button type="submit">Sign up</button>
+        </form>
+        <p class="status" id="signup-status"></p>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
